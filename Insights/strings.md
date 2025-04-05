@@ -6,6 +6,4 @@
  for(char &c: sentence){
 		c = std::tolower(c);
 	}
-
-
-
+```
