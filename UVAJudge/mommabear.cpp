@@ -9,7 +9,7 @@ std::string changeCaseAndremPun(std::string sentence){
 		c = std::tolower(c);
 	}
 	
-	//REMOVING everything except 
+	//REMOVING everything except a to z chars
 	sentence.erase(std::remove_if(sentence.begin(), sentence.end(), [](char c){
 		return !(c >= 'a' && c <= 'z');
 	}), sentence.end());
