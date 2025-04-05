@@ -1,10 +1,13 @@
 #include<iostream>
+#include<cctype>
 
 std::string changeCaseAndremPun(std::string sentence){
 	//first to lowercase using a loop
 	for(char &c: sentence){
-		char c = std::tolower(c);
+		c = std::tolower(c);
 	}
+	//REMOVING everything except 
+	return sentence;
 }
 
 int main(){
@@ -13,7 +16,7 @@ int main(){
 	std::cout.tie(0);
 
 	std::string sentence;
-	while(std::getline(std::cin, sentence) && sentence != DONE){
+	while(std::getline(std::cin, sentence) && sentence != "DONE"){
 		sentence = changeCaseAndremPun(sentence);
 
 		// debugging
