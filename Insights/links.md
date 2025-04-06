@@ -1,1 +1,5 @@
-[My plan](https://1drv.ms/w/c/cd979e2f8d75e2d9/Eakeh_r-x1hJp7hLGpXlgbYBFfbqNjrKIdsAFXz0E_5KLw?e=M7BGTd)
+[My doc](https://1drv.ms/w/c/cd979e2f8d75e2d9/Eakeh_r-x1hJp7hLGpXlgbYBFfbqNjrKIdsAFXz0E_5KLw?e=M7BGTd)
+
+# TO refine
+	-lowercase
+	-removing the other characters other than a to z
