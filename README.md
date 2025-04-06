@@ -1,5 +1,10 @@
-# Welcome to my practice zone.
-### I target safaricom internship
-My name is Peter Kiarie , a student who is passionate about solving problems. I pursue a bachelors in Computer Science.
-I really want to master Algorithms and data structures. I begun 3 months ago doing them in c++ and now I can do basic easy questions.
-When I will be ready in c++ then will I move to solving them in *python* and other cool languages like *Java*
+# Welcome to my Algorithms Practice Zone
+
+## About Me
+My name is Peter Kiarie, and I am a Computer Science student passionate about solving problems. I am currently pursuing a bachelor's degree in Computer Science.
+
+## My Goals
+I aim to master algorithms and data structures. I started learning them in C++ three months ago and can now solve basic problems.
+
+## Future Plans
+Once I am proficient in C++, I plan to expand my skills to other languages like Python and Java.
