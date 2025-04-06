@@ -16,4 +16,5 @@
 sentence.erase(std::remove_if(sentence.begin(), sentence.end(), [] (char c){
 	return !(c >= 'a' && c <= 'z');
 }), sentence.end());
+// erase comes from <string> header and remove_if from the standard library and a component of <algorithm> header
 ```
