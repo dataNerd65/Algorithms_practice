@@ -8,7 +8,22 @@
 	}
 ```
 ### Using transform from algorithm header
+Here we need to headers <algorithm> and <cctype> for tolower()
+```cpp
+#include<iostream>
+#include<string>
+#include<algorithm> // for std::transform
+#include<cctype> // for std::tolower
 
+// the function to lowercase
+std::string processString(std::string sentence){
+	// Use transform to convert each character to lowercase
+	std::transform(sentence.begin(), sentence.end(), sentence.begin(), [](unsigned char c){
+		return std::tolower(c);
+	});
+	return sentence;
+}
+```
 
 ### In astring, lets remove anything not from a to z
 
