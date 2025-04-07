@@ -33,3 +33,20 @@ sentence.erase(std::remove_if(sentence.begin(), sentence.end(), [] (char c){
 }), sentence.end());
 // erase comes from <string> header and remove_if from the standard library and a component of <algorithm> header
 ```
+
+### .find method for substrings(from qn 282A codeforces)
+```
+if(state.find("++") != std::string::npos){
+			x++;
+		}else if(state.find("--") != std::string::npos){
+			x--;
+		}
+```
+### Substrings
+```cpp
+std::string name = "Wambui";
+std::cout<<name.substr(0, 3); // we use (start_index, length) 3 is length and not ending index
+// output: 
+```
+
+But when we want to get all substrings in a string 
