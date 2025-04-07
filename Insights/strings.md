@@ -8,7 +8,7 @@
 	}
 ```
 ### Using transform from algorithm header
-Here we need to headers <algorithm> and <cctype> for tolower()
+Here we need two headers algorithm and cctype for tolower()
 ```cpp
 #include<iostream>
 #include<string>
