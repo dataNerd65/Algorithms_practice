@@ -17,6 +17,11 @@ std::string processString(std::string sentence){
 }
 
 int main(){
+	// forgot the faster input synchronization
+	std::ios_base::sync_with_stdio(0);
+	std::cin.tie(0);
+	std::cout.tie(0);
+
 	std::string sentence; 
 
 	while(std::getline(std::cin, sentence) && sentence != "DONE"){
