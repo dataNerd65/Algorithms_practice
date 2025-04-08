@@ -35,7 +35,8 @@ sentence.erase(std::remove_if(sentence.begin(), sentence.end(), [] (char c){
 ```
 
 ### .find method for substrings(from qn 282A codeforces)
-```
+```cpp
+std::string name = "++x";
 if(state.find("++") != std::string::npos){
 			x++;
 		}else if(state.find("--") != std::string::npos){
@@ -49,4 +50,17 @@ std::cout<<name.substr(0, 3); // we use (start_index, length) 3 is length and no
 // output: 
 ```
 
-But when we want to get all substrings in a string 
+### Getting index of a char in astring
+```cpp
+// find method in characters
+#include <iostream>
+
+int main()
+{
+    std::string hello = "Hello World";
+    size_t t = hello.find('e');
+    std::cout<<t<<'\n';
+
+    return 0;
+}
+```
