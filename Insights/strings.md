@@ -1,5 +1,13 @@
 # Basics of Strings in c++
 
+### getting the size or length of a string
+```cpp
+int lenOfString = line.length();
+	// also can use line.size()
+/*@@string indexes start at 0
+*/
+```
+
  ### using for loop in lowering case , assuming sentence is already declared
 
  ```cpp
