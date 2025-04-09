@@ -6,33 +6,37 @@
 bool isMirrored(const std::string& line, const std::unordered_map<char, char>& maps){
 	int lenOfString = line.length();
 	// also can use line.size()
-	if(lenOfString % 2 != 0){
-		int middle = lenOfString / 2; // string indexes start at 0 so / 2 will do
+	int middle = lenOfString / 2; // string indexes start at 0 so / 2 will do
 
-		for(int i = 0; i < middle; ++i){
-			char left = line[i];
-			char right = line[lenOfString - 1 - i];
+	for(int i = 0; i < middle; ++i){
+		char left = line[i];
+		char right = line[lenOfString - 1 - i];
 
-			// checking if both characters are inthe map na they mirror
-			if(maps.find(left) == maps.end() || maps.find(right) == maps.end()|| maps.at(left) != right){
-				return false;
-			}
+		// checking if both characters are inthe map na they mirror
+		if(maps.find(left) == maps.end() || maps.find(right) == maps.end()|| maps.at(left) != right ) {
+			return false;
 		}
-		
 	}
+
+	// for strings of odd length, check if the middle character is a valid as its own mirror
+	if(lenOfString % 2 == 1){
+		char middleChar = line[middle];
+		if(maps.find(middleChar) == maps.end() || maps.at(middleChar) != middleChar){
+			return false;	
+		}
+	}
+		
 	return true;
 }
+	
+
 
 bool isPalindrome(std::string line){
 	// string has valid characters so just reverse
 	std::string copy = line;
 	std::reverse(copy.begin(), copy.end());
 
-	if(copy == line){
-		return true;
-	} else{
-		return false;
-	}
+	return copy == line;
 
 }
 
@@ -54,16 +58,16 @@ int main(){
 	//for(const auto& pair : maps){
 	//	std::cout<<pair.first<<"=>"<<pair.second<<'\n';
 	//}
-	while(std::getline(std::cin, line) && line != "DONE"){
+	while(std::cin>>line){
 		// checking if string is both  a palindrome and mirrored
 		if(isPalindrome(line) && isMirrored(line, maps)){
-			std::cout<<line<<" -- "<<"is a mirrored palindrome."<<'\n';
+			std::cout<<line<<" -- "<<"is a mirrored palindrome."<<'\n'<<'\n';
 		}else if(isPalindrome(line) && !(isMirrored(line, maps))){
-			std::cout<<line<<" -- "<<"is a regular palindrome."<<'\n';
+			std::cout<<line<<" -- "<<"is a regular palindrome."<<'\n'<<'\n';
 		}else if(!(isPalindrome(line)) && (isMirrored(line, maps))){
-			std::cout<<line<<" -- "<<"is a mirrored string."<<'\n';
+			std::cout<<line<<" -- "<<"is a mirrored string."<<'\n'<<'\n';
 		}else if(!(isPalindrome(line)) && !(isMirrored(line, maps))){
-			std::cout<<line<<" -- "<<"is not a palindrome."<<'\n';
+			std::cout<<line<<" -- "<<"is not a palindrome."<<'\n'<<'\n';
 		}
 	}
 	return 0;
