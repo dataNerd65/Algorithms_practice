@@ -6,7 +6,7 @@
 bool isMirrored(const std::string& line, const std::unordered_map<char, char>& maps){
 	int lenOfString = line.length();
 	// also can use line.size()
-	int middle = lenOfString / 2; // string indexes start at 0 so / 2 will do
+	int middle = lenOfString / 2; // string indexes start at 0 
 
 	for(int i = 0; i < middle; ++i){
 		char left = line[i];
@@ -45,7 +45,7 @@ int main(){
 	std::cin.tie(0);
 	std::cout.tie(0);
 
-	std::string line;  
+	  
 	// The dictionary for their reverses O(1)lookups
 	std::unordered_map<char, char> maps = {
 		{'A' , 'A'},{'E', '3'}, {'H','H'}, {'I','I'}, {'J','L'}, {'L','J'},
@@ -58,6 +58,7 @@ int main(){
 	//for(const auto& pair : maps){
 	//	std::cout<<pair.first<<"=>"<<pair.second<<'\n';
 	//}
+	std::string line;
 	while(std::cin>>line){
 		// checking if string is both  a palindrome and mirrored
 		if(isPalindrome(line) && isMirrored(line, maps)){
